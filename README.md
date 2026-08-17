@@ -1,7 +1,5 @@
 # Course Timetable Planner — React Frontend
 
-[![CI](https://github.com/Sidharthkris/course-timetable-planner-frontend/actions/workflows/ci.yml/badge.svg)](https://github.com/Sidharthkris/course-timetable-planner-frontend/actions/workflows/ci.yml)
-
 A React + TypeScript single-page app consuming the [Course Timetable
 Planner API](https://github.com/Sidharthkris/course-timetable-planner)
 — the same weekly calendar grid and role-based access control as the
