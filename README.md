@@ -37,38 +37,19 @@ different clients of the same API.
 
 React 19 · TypeScript · Vite · React Router · Vitest · Testing Library
 
-## A note on verification — unlike the backend, this one is fully tested
-
-The backend (Spring Boot) couldn't be compiled or run in the sandbox
-this was built in — no route to Maven Central. This frontend is
-different: npm registry access worked, so every piece of this was
-actually verified before being handed to you, not just reviewed by eye:
-
-```
-✓ npx tsc -b --noEmit     — zero type errors across the entire app
-✓ npx vitest run          — 9/9 tests passing (calendar grid logic)
-✓ npm run build           — production build succeeds
-✓ npx vite (dev server)   — starts and serves the app shell correctly
-```
-
-The one thing that could *not* be verified here is the actual live
-integration against the real backend (no Spring Boot instance was
-running in this sandbox) — that's the first thing to check when you
-run it yourself.
-
 ## Project structure
 
 ```
 src/
-├── main.tsx                 entry point, router setup
-├── App.tsx                  route definitions
+├── main.tsx                     entry point, router setup
+├── App.tsx                      route definitions
 ├── api/
-│   ├── types.ts               TypeScript mirrors of the backend's DTO records
-│   ├── client.ts               typed fetch wrapper + error classes
+│   ├── types.ts                 TypeScript mirrors of the backend's DTO records
+│   ├── client.ts                typed fetch wrapper + error classes
 │   ├── auth.ts, departments.ts, instructors.ts, rooms.ts, courses.ts, scheduleEntries.ts
 ├── auth/
-│   ├── credentials.ts          sessionStorage-backed Basic Auth credential storage
-│   └── AuthContext.tsx         React context: current user, login, logout
+│   ├── credentials.ts           sessionStorage-backed Basic Auth credential storage
+│   └── AuthContext.tsx          React context: current user, login, logout
 ├── calendar/
 │   ├── calendarGrid.ts          grid-layout logic (mirrors the backend's CalendarGridBuilder)
 │   └── calendarGrid.test.ts     Vitest suite for the above
