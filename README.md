@@ -11,6 +11,16 @@ is the single source of truth, and both this SPA and the original
 Thymeleaf pages can run against it simultaneously — they're just two
 different clients of the same API.
 
+## Screenshots
+
+| Login | Weekly schedule (coordinator view) |
+|---|---|
+| ![Login page](docs/screenshots/login.png) | ![Weekly schedule grid](docs/screenshots/schedule-coordinator.png) |
+
+| Conflict detection in action | Instructor view (read-only) |
+|---|---|
+| ![Conflict error banner](docs/screenshots/schedule-conflict.png) | ![Instructor view](docs/screenshots/schedule-instructor.png) |
+
 ## Features
 
 - Login screen using the backend's existing HTTP Basic auth — no
